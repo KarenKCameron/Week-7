@@ -1,10 +1,59 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Contact Me</title>
-  </head>
 
-  <body>
-    <!-- TODO -->
-  </body>
+<head>
+  <title>Connect with Karen Cameron</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link rel="stylesheet" href="contact-me.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1>Connect With Me</h1>
+    <form id="connect-form">
+      <div class="form-group">
+        <label for="full-name">Full Name</label>
+        <input id="full-name" class="form-control validate-input" type="text" name="first-name" minlength=3 required />
+        <small class="error" aria-live="polite"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input id="email" class="form-control validate-input" type="email" name="email" required />
+        <small class="error" aria-live="polite"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="kind">What can I help you with?</label>
+        <select class="form-control" name="kind" id="contact-kind">
+          <option value="choose" selected="selected" disabled>
+            Choose one
+          </option>
+          <option value="job-opportunity">Job Opportunity</option>
+          <option value="talk-code">Let's talk code!</option>
+        </select>
+        <small class="error" aria-live="polite"></small>
+      </div>
+
+      <div class="form-group hidden" id="job-fields">
+        <label for="job-title"></label>Job title</label>
+        <input type="text">
+        <label for="website"></label>Website</label>
+        <input type="url">
+      </div>
+
+      <div class="form-group hidden" id="code-fields">
+        <label for="code-message"></label>Leave me a message</label>
+        <input type="textarea" id=messageBox maxlength=1000 minlength=10 />
+      </div>
+      <div class="form-group">
+        <input class="btn btn-primary" type="submit" value="Sign up" />
+      </div>
+    </form>
+  </div>
+
+  <script src="contact-me.js"></script>
+</body>
+
 </html>
